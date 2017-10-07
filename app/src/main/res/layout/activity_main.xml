@@ -4,15 +4,212 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mdaniel.sanitavet.MainActivity">
+    tools:context="mdaniel.sanitavet.MainActivity"
+    android:background="@android:color/holo_blue_light"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_gravity="center"
+        tools:layout_constraintLeft_creator="1"
+        android:id="@+id/linear_layout_all"
+        tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_editor_absoluteY="-3dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/logo_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:src="@drawable/logo"
+            android:text="Sanita Vet"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+            android:id="@+id/linear_layout_medium"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="vertical"
+            >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:rowCount="5"
+                android:useDefaultMargins="true"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                    android:id="@+id/linear_layout_vert1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintRight_creator="1"
+                    tools:layout_constraintTop_creator="1">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:id="@+id/linear_layout_row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+                        tools:layout_constraintLeft_creator="1"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintTop_creator="1">
+
+                        <ImageButton
+                            android:id="@+id/reservation_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="89dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/reservation_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:id="@+id/linear_layout_row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+                        tools:layout_constraintLeft_creator="1"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintTop_creator="1">
+
+                        <ImageButton
+                            android:id="@+id/about_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="86dp"
+                            android:layout_weight="1.00"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/about_icon" />
+
+                        <ImageButton
+                            android:id="@+id/services_button"
+                            android:layout_width="183dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/services_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:id="@+id/linear_layout_row3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+                        tools:layout_constraintLeft_creator="1"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintTop_creator="1">
+
+                        <ImageButton
+                            android:id="@+id/facebook_button"
+                            android:layout_width="191dp"
+                            android:layout_height="105dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/facebook_icon" />
+
+                        <ImageButton
+                            android:id="@+id/location_button"
+                            android:layout_width="182dp"
+                            android:layout_height="97dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/location_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:id="@+id/linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logo_pic"
+                        tools:layout_constraintLeft_creator="1"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintTop_creator="1">
+
+                        <ImageButton
+                            android:id="@+id/apel_button"
+                            android:layout_width="122dp"
+                            android:layout_height="112dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/call_icon" />
+
+                        <ImageButton
+                            android:id="@+id/sms_button"
+                            android:layout_width="126dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sms_icon" />
+
+                        <ImageButton
+                            android:id="@+id/email_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="101dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/email_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+            </GridLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
